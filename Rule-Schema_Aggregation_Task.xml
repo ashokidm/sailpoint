@@ -1,0 +1,30 @@
+<Schema aggregationType="group" created="" displayAttribute="cn" featuresString="PROVISIONING" id="" identityAttribute="dn" instanceAttribute="" modified="" nativeObjectType="sudoRole" objectType="sudoRole">
+<AttributeDefinition name="cn" type="string">
+<Description>common name(s) for which the entity is known by</Description>
+</AttributeDefinition>
+<AttributeDefinition name="dn" type="string">
+<Description>Directory Path</Description>
+</AttributeDefinition>
+<AttributeDefinition name="ou" type="string">
+<Description>organizational unit this object belongs to</Description>
+</AttributeDefinition>
+<AttributeDefinition name="description" type="string">
+<Description>descriptive information</Description>
+</AttributeDefinition>
+<AttributeDefinition multi="true" name="sudoUser" type="string">
+<Description>unique member of a sudoRole </Description>
+</AttributeDefinition>
+<Attributes>
+<Map>
+<entry key="groupMemberAttribute" value="sudoUser"/>
+<entry key="memberAttribute">
+<value>
+<List>
+<String>cn</String>
+<String>uid</String>
+</List>
+</value>
+</entry>
+</Map>
+</Attributes>
+</Schema>
